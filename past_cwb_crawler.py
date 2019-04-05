@@ -117,7 +117,7 @@ for i in range((end_date - begin_date).days+1):
     if(data_correct):
         df.to_csv (file_path+'\\'+cwb_data+'/'+date+'_past_obs'+".csv" , encoding = "utf-8-sig",index=False)
         listdata=df.values.tolist()
-        db = pymysql.connect('140.119.9.88','isvmsdata','dataisvms2018','open_data' ) 
+        db = pymysql.connect('IP','ACCOUNT','PASSWORD','DATABASE' ) 
         cursor = db.cursor()
 
         insertsql = 'insert into weather_past_obs(station_city,station_name,Date,ObsTime,StnPres,SeaPres,Temperature,Tddewpoint,RH,WS,WD,WSGust,WDGust,Precp,PrecpHour,SunShine,GloblRad,Visb,UVI,Cloud_Amoun) VALUES (%s, %s, %s, %s, %s, %s, %s,%s, %s, %s, %s, %s, %s, %s,%s, %s, %s, %s, %s, %s)'
