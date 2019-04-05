@@ -31,7 +31,7 @@ if not os.path.exists(file_path+'\\'+cwb_data):
 
 url='https://opendata.cwb.gov.tw/fileapi/v1/opendataapi/{dataid}?Authorization={apikey}&format={formatt}'
 dataid='O-A0001-001'
-apikey='CWB-D931EFB8-3C85-4845-869E-665B13359FC6'
+apikey='YOUR APIKEY'
 formatt='json'
 link=url.format(dataid=dataid,apikey=apikey,formatt=formatt)
 #link
@@ -176,7 +176,7 @@ listdata=cwb.values.tolist()
 # In[19]:
 
 
-db = pymysql.connect('140.119.9.88','isvmsdata','dataisvms2018','open_data' ) 
+db = pymysql.connect('IP','ACCOUNT','PASSWORD','DATABASE' ) 
 cursor = db.cursor()
 
 insertsql = 'insert into weather_reality(observe_time, DAY, HOUR, CITY, TOWN,locationName,CITY_SN,TOWN_SN,stationId,lat,lon,lat_wgs84,lon_wgs84,ELEV,WDIR,WDSD,TEMP,HUMD,PRES,SUN,H_24R,H_FX, H_XD, H_FXT, D_TX, D_TXT, D_TN, D_TNT,access_time) VALUES (%s, %s, %s, %s, %s, %s, %s,%s, %s, %s, %s, %s, %s, %s,%s, %s, %s, %s,%s, %s, %s, %s, %s, %s, %s,%s, %s, %s, %s)'
