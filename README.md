@@ -1,2 +1,2 @@
 # crawl_cwb_weather
-crawl central weather bureau weather information
+中央氣象局 氣象資料爬蟲
