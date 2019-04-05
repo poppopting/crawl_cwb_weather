@@ -19,7 +19,7 @@ pd.options.display.max_info_rows = None
 # In[2]:
 
 
-#file_path=r'C:\isvms'
+
 file_path = r'D:\open_data\weather_reality'
 cwb_data = "cwb_weather_data"
 if not os.path.exists(file_path+'\\'+cwb_data):
