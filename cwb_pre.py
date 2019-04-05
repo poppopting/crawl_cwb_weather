@@ -19,7 +19,6 @@ import pymysql
 
 
 file_path = r'D:\open_data\weather_predict'
-#file_path = r'C:\isvms\predict_cwb'
 cwb_data = "cwb_weather_data_pre"
 if not os.path.exists(file_path+'\\'+cwb_data):
     os.mkdir(file_path+'\\'+cwb_data)
@@ -30,7 +29,7 @@ if not os.path.exists(file_path+'\\'+cwb_data):
 
 url='https://opendata.cwb.gov.tw/fileapi/v1/opendataapi/{dataid}?Authorization={apikey}&format={formatt}'
 dataid='F-D0047-093'
-apikey='CWB-D931EFB8-3C85-4845-869E-665B13359FC6'
+apikey='YOUR APIKEY'
 formatt='zip'
 link=url.format(dataid=dataid,apikey=apikey,formatt=formatt)
 data_path=file_path+'\\'+cwb_data+'\\'+dataid+'.'+formatt
@@ -181,7 +180,7 @@ listdata=df.values.tolist()
 # In[21]:
 
 
-db = pymysql.connect('140.119.9.88','isvmsdata','dataisvms2018','open_data' ) 
+db = pymysql.connect('IP','ACCOUNT','PASSWORD','DATABASE' ) 
 cursor = db.cursor()
 
 insertsql = 'insert into weather_predict(CITY,DISTRICT,GEOCODE,DAYTIME,DAY,HOUR,T,TD,RH,WD,WS,BF,AT,Wx,Wx_n,PoP6h,PoP12h,get_day) VALUES (%s, %s, %s, %s, %s, %s, %s,%s, %s, %s, %s, %s, %s, %s,%s, %s, %s, %s)'
