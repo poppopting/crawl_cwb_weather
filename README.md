@@ -8,7 +8,3 @@
    
 * 透過連接中央氣象局之互動式網站，進行歷史觀測資料網頁爬蟲:
   -link:  https://e-service.cwb.gov.tw/HistoryDataQuery/index.jsp
-* 透過連接中央氣象局之互動式網站，進行歷史觀測資料網頁爬蟲:
-  -link:  https://e-service.cwb.gov.tw/HistoryDataQuery/index.jsp  
-  -[  學習資源:學HTML](http://mrorz.github.io/webdev/html.html#/)  
-  -[  學習資源:Graph API - 3步獲取 Facebook 粉絲頁的 Post 數據]
