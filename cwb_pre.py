@@ -19,7 +19,7 @@ url = 'https://opendata.cwb.gov.tw/fileapi/v1/opendataapi/{dataid}?Authorization
 dataid = 'F-D0047-093'
 apikey = 'YOUR APIKEY'
 formatt = 'zip'
-link = url.format(dataid=dataid,apikey=apikey,formatt=formatt)
+link = url.format(dataid=dataid, apikey=apikey, formatt=formatt)
 data_path = file_path+'\\'+cwb_data+'\\'+dataid+'.'+formatt
 
 
