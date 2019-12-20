@@ -141,7 +141,7 @@ db = pymysql.connect('IP', 'ACCOUNT', 'PASSWORD', 'DATABASE' )
 cursor = db.cursor()
 
 insertsql = 'insert into weather_reality(observe_time, DAY, HOUR, CITY, TOWN, locationName, CITY_SN, TOWN_SN, stationId, lat, lon, lat_wgs84,lon_wgs84, ELEV, WDIR, WDSD, TEMP, HUMD, PRES, SUN, H_24R, H_FX, H_XD, H_FXT, D_TX, D_TXT, D_TN, D_TNT, access_time) VALUES (%s, %s, %s, %s, %s, %s, %s,%s, %s, %s, %s, %s, %s, %s,%s, %s, %s, %s,%s, %s, %s, %s, %s, %s, %s,%s, %s, %s, %s)'
-cursor.executemany(insertsql,listdata)
+cursor.executemany(insertsql, listdata)
 db.commit()
 cursor.close()
 db.close()
